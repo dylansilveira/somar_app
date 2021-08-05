@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
               border: OutlineInputBorder(),
               labelText: 'Primeiro número',
             ),
-            onChanged: (value) => {if(value.isNotEmpty) ad.num1 = int.parse(value)},
+            onChanged: (value) => {if(value.isNotEmpty && value.runtimeType == int) ad.num1 = int.parse(value)},
             keyboardType: TextInputType.number,
           ),
           TextField(
@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
               border: OutlineInputBorder(),
               labelText: 'Segundo número',
             ),
-            onChanged: (value) => {if(value.isNotEmpty) ad.num2 = int.parse(value)},
+            onChanged: (value) => {if(value.isNotEmpty && value.runtimeType == int) ad.num2 = int.parse(value)},
             keyboardType: TextInputType.number,
           ),
           ElevatedButton(
